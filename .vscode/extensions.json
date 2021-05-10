@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "EditorConfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "taichi.vscode-textlint"
+  ]
+}
