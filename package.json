@@ -10,6 +10,9 @@
     "zenn-cli": "^0.1.79"
   },
   "devDependencies": {
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "textlint": "^11.9.1",
+    "textlint-rule-preset-ja-spacing": "^2.1.1",
+    "textlint-rule-preset-ja-technical-writing": "^6.0.0"
   }
 }
