@@ -1,0 +1,12 @@
+{
+  "name": "zenn-contents",
+  "private": true,
+  "author": "Mio Maeda <mio.maeda.kari@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "zenn preview"
+  },
+  "dependencies": {
+    "zenn-cli": "^0.1.79"
+  }
+}
