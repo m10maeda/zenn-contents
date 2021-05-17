@@ -11,7 +11,7 @@
     "**/*.{json}": [
       "prettier --write"
     ],
-    "README.md,articles/*.md,books/**/*.md": [
+    "**/*.md": [
       "prettier --write",
       "markdownlint --fix",
       "textlint --fix"
