@@ -8,7 +8,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "README.md,articles/*.md,books/**/*.md": [
+    "**/*.{json}": [
+      "prettier --write"
+    ],
+    "**/*.md": [
       "prettier --write",
       "markdownlint --fix",
       "textlint --fix"
