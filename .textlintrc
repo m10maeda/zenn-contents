@@ -10,6 +10,11 @@
         "before": true,
         "after": true
       }
+    },
+    "ja-technical-writing/ja-no-mixed-period": {
+      "allowPeriodMarks": [
+        ":"
+      ]
     }
   }
 }
