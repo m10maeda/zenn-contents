@@ -3,31 +3,46 @@ name: reviewdog
 on: [pull_request]
 
 jobs:
-  lint:
-    name: runner / lint
+  markdownlint:
+    name: runner / markdownlint
 
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
 
       - name: Setup node/npm
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '14'
+          cache: npm
 
       - name: markdownlint-github-pr-review
         uses: reviewdog/action-markdownlint@v0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          level: warning
           reporter: github-pr-review
+
+  textlint:
+    name: runner / textlint
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node/npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: npm
 
       - name: textlint-github-pr-review
         uses: tsuyoshicho/action-textlint@v3
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          textlint_flags: 'articles/**'
+          level: warning
