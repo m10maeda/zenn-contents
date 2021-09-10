@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
 
       - name: Setup node/npm
         uses: actions/setup-node@v1
@@ -34,8 +32,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          submodules: true
 
       - name: Setup node/npm
         uses: actions/setup-node@v1
