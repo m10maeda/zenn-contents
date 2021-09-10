@@ -1,0 +1,24 @@
+name: publisher
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    if: github.event.pull_request.merged == true
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2 # Because if `fetch-depth >= 2` is not set, unchanged files will be updated.
+
+      - uses: korosuke613/zenn-metadata-updater-action@v1
+        with:
+          published: true
+          force-push: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
