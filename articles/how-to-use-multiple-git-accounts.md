@@ -27,7 +27,7 @@ published: false
 
 ## SSH キーを複数用意
 
-プライベート用と仕事用にそれぞれ SSH キーを用意します。SSH キーの作り方は[新しい SSH キーを生成して ssh-agent に追加する方法](https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)を参照してください。
+プライベート用と仕事用にそれぞれ SSH キーを用意します。SSH キーの作り方は[GitHub Docs の新しい SSH キーを生成して ssh-agent に追加する方法](https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)を参照してください。
 
 ファイル名は任意ですが、間違えないように区別しやすい名前にしておきましょう。
 
@@ -47,7 +47,7 @@ id_ed25519.work.pub    # 仕事用公開鍵
 以下のように設定しておきます。
 
 ```plain:~/.ssh/config
-# GitHub
+# GitHub 用設定
 Host github.com
   HostName ssh.github.com
   IdentityFile ~/.ssh/id_ed25519.private
@@ -55,15 +55,15 @@ Host github.com
   UseKeychain yes
   TCPKeepAlive yes
 
-# GitHub Enterprise Server
-Host git.example.com
+# GitHub Enterprise Server 用設定
+Host git.example.com # ホスティングしている場所に変更
   IdentityFile ~/.ssh/id_ed25519.work
   AddKeysToAgent yes
   UseKeychain yes
   TCPKeepAlive yes
 ```
 
-GitHub Enterprise Server の `git.example.com` はホスティングしている場所に変更してください。
+GitHub Enterprise Server 用設定の `git.example.com` はホスティングしている場所に変更してください。
 
 ### SSH 接続確認
 
@@ -74,12 +74,16 @@ $ ssh -T git@github.com
 Hi <プライベート用の名前>! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-続いて GitHub Enterprise Server への接続確認をします。こちらもホスティングしているものに変更して確認してください。
+GitHub に設定している名前が表示されれば問題ありません。
+
+続いて GitHub Enterprise Server への接続確認をします。こちらも投げ先はホスティングしているものに変更して確認してください。
 
 ```shell
 $ ssh -T git@git.example.com
 Hi <仕事用の名前>! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+GitHub Enterprise Server に設定している名前が表示されれば問題ありません。
 
 ## `.gitconfig` の設定
 
@@ -133,4 +137,4 @@ $ git config --get user.name
 
 ## 雑感
 
-いつも `git config` で設定を切り替えたりしていて面倒だったのがだいぶ快適になりました。
+いつも `git config` で設定を切り替えていて面倒だったのがだいぶ快適になりました。
