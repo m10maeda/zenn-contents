@@ -1,9 +1,9 @@
 ---
-title: '複数の Git アカウントを使い分ける方法'
-emoji: '👥'
-type: 'tech'
-topics: ['Git']
-published: false
+title: "複数の Git アカウントを使い分ける方法"
+emoji: "👥"
+type: "tech"
+topics: ["Git"]
+published: true
 ---
 
 プライベート用と仕事用で Git のアカウントを使い分ける必要があったので、調べて設定したものをまとめてみました。
