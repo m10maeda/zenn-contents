@@ -1,6 +1,12 @@
 {
   "rules": {
-    "preset-ja-technical-writing": true,
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [
+          ":"
+        ]
+      }
+    },
     "preset-ja-spacing": {
       "ja-space-between-half-and-full-width": {
         "space": "always",
@@ -10,11 +16,6 @@
         "before": true,
         "after": true
       }
-    },
-    "ja-technical-writing/ja-no-mixed-period": {
-      "allowPeriodMarks": [
-        ":"
-      ]
     }
   }
 }
