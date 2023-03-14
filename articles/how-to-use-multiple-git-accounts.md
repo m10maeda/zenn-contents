@@ -1,8 +1,8 @@
 ---
-title: '複数の Git アカウントを使い分ける方法'
-emoji: '👥'
-type: 'tech'
-topics: ['Git']
+title: "複数の Git アカウントを使い分ける方法"
+emoji: "👥"
+type: "tech"
+topics: ["Git"]
 published: true
 ---
 
