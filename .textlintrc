@@ -1,16 +1,19 @@
 {
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "ja-no-mixed-period": {
-        "allowPeriodMarks": [
-          ":"
-        ]
-      }
+        "allowPeriodMarks": [":"]
+      },
+      "no-exclamation-question-mark": false
     },
     "preset-ja-spacing": {
       "ja-space-between-half-and-full-width": {
-        "space": "always",
-        "exceptPunctuation": true
+        "space": [
+          "alphabets"
+        ]
       },
       "ja-space-around-code": {
         "before": true,
