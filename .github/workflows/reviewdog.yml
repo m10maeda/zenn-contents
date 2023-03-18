@@ -3,8 +3,8 @@ name: reviewdog
 on: [pull_request]
 
 jobs:
-  markdownlint:
-    name: runner / markdownlint
+  lint:
+    name: markdownlint and textlint
 
     runs-on: ubuntu-latest
 
@@ -24,21 +24,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           level: warning
           reporter: github-pr-review
-
-  textlint:
-    name: runner / textlint
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup node/npm
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          cache: npm
 
       - name: textlint-github-pr-review
         uses: tsuyoshicho/action-textlint@v3
