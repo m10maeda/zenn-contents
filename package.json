@@ -5,6 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "zenn preview",
+    "format": "prettier . --ignore-unknown --check",
+    "markdownlint": "markdownlint .",
+    "textlint": "textlint .",
+    "lint": "npm run markdownlint && npm run textlint",
     "prepare": "husky install"
   },
   "lint-staged": {
