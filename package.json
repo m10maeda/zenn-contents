@@ -9,6 +9,7 @@
     "markdownlint": "markdownlint .",
     "textlint": "textlint .",
     "lint": "npm run markdownlint && npm run textlint",
+    "preinstall": "npx only-allow npm",
     "prepare": "husky install"
   },
   "lint-staged": {
