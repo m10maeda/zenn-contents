@@ -185,12 +185,20 @@ published: true
 
 ### ひとつのドメインモデルが持つ関係が多くなってしまう
 
+<!-- markdownlint-disable MD024 -->
+
 #### 何が問題か
+
+<!-- markdownlint-enable MD024 -->
 
 - ドメインモデルが低凝集になってしまうため
   - そのモデルの役割が明確にならなくなるため
 
+<!-- markdownlint-disable MD024 -->
+
 #### 考えられる原因と解決策
+
+<!-- markdownlint-enable MD024 -->
 
 - 目的を達成することには無関係な関係が書かれている可能性
   - 目的を達成するために必要な関係以外は書かない
@@ -202,12 +210,20 @@ published: true
 
 ### 双方向に依存している
 
+<!-- markdownlint-disable MD024 -->
+
 #### 何が問題か
+
+<!-- markdownlint-enable MD024 -->
 
 - 結合度が高まり変更に弱くなるため
   - 実装だけに限らずドメイン的にも
 
+<!-- markdownlint-disable MD024 -->
+
 #### 考えられる原因と解決策
+
+<!-- markdownlint-enable MD024 -->
 
 - 複数の目的の関係性をひとつの関係で表している可能性
   - 関係性ごとにきちんと関係を分ける
@@ -216,11 +232,19 @@ published: true
 
 ### 多対多の関係を持っている
 
+<!-- markdownlint-disable MD024 -->
+
 #### 何が問題か
+
+<!-- markdownlint-enable MD024 -->
 
 - モデル同士の関係性が複雑になるため
 
+<!-- markdownlint-disable MD024 -->
+
 #### 考えられる原因と解決策
+
+<!-- markdownlint-enable MD024 -->
 
 - 複数の関係性をひとつの関係で表している可能性
   - 関係性ごとにきちんと関係を分ける
@@ -231,11 +255,19 @@ published: true
 
 ### ノートの記載が多すぎる
 
+<!-- markdownlint-disable MD024 -->
+
 #### 何が問題か
+
+<!-- markdownlint-enable MD024 -->
 
 - ドメイン知識がドメイン層から漏れるリスクがあるため
 
+<!-- markdownlint-disable MD024 -->
+
 #### 考えられる原因と解決策
+
+<!-- markdownlint-enable MD024 -->
 
 - モデルで表現可能な隠れた概念やモデルで表現するべき概念を見落としている可能性
   - ノート内の重要な単語をモデルとして切り出せないか検討する
@@ -255,7 +287,7 @@ published: true
 - [DDD のモデリングとは何なのか、 そしてどうコードに落とすのか](https://www.slideshare.net/koichiromatsuoka/domain-modeling-andcoding)
 - [ドメイン駆動設計は何を解決しようとしているのか](https://little-hands.hatenablog.com/entry/2018/10/08/goal-of-ddd)
 - [モデルとは"現実世界を正しく表現したもの"ではないという話 / 境界付けられたコンテキストの必要性[DDD]](https://little-hands.hatenablog.com/entry/2017/10/16/000110)
-- [ドメイン知識とユースケースの違いは何か？[ドメイン駆動設計][DDD]](https://little-hands.hatenablog.com/entry/2019/07/26/domain-knowledge)
+- [ドメイン知識とユースケースの違いは何か？\[ドメイン駆動設計\][DDD]](https://little-hands.hatenablog.com/entry/2019/07/26/domain-knowledge)
 - [モデルでドメイン知識を表現するとは何か[DDD]](https://little-hands.hatenablog.com/entry/2017/10/04/201201)
 - [ドメイン駆動設計とは何なのか？ ユーザーの業務知識をコードで表現する開発手法について](https://www.shoeisha.co.jp/book/article/detail/265)
 - [ドメイン駆動設計における「良いモデル」と「悪いモデル」とは](https://logmi.jp/tech/articles/322831)
