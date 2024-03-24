@@ -10,16 +10,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup node/npm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '18'
           cache: npm
 
       - name: markdownlint-github-pr-review
-        uses: reviewdog/action-markdownlint@v0.1
+        uses: reviewdog/action-markdownlint@v0.14
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           level: warning
