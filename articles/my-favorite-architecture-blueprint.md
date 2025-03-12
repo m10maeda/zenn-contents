@@ -181,7 +181,7 @@ export interface IProfileFactory {
 
 ### `IUseCaseInputPort`
 
-`IUseCaseInputPort` はビジネスユースケースを実現するインターフェースとなり、ドメイン層のオブジェクトを使用して一連のビジネスロジックを実現します。
+`IUseCaseInputPort` はビジネスユースケースを実現するインターフェースとなります。
 
 個々の具体的な `IUseCaseInputPort` は以下のベースとなるインターフェースを継承し、ビジネスユースケースごとに必要な入力と出力を定義します。
 
@@ -233,7 +233,7 @@ export interface IRenameCircleUseCaseInputPort
 
 ### `Interactor`
 
-Interactor はユースケースのうち、副作用を持つコマンド（操作）に該当するユースケースの実装クラスとなります。
+Interactor はユースケースのうち、副作用を持つコマンド（操作）に該当するユースケースの実装クラスとなります。ドメイン層のオブジェクトを使用して一連のビジネスロジックを実現します。
 
 ![Intaractor の例](https://storage.googleapis.com/zenn-user-upload/761f22d631e5-20250311.png)
 
