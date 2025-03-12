@@ -25,13 +25,13 @@ https://github.com/m10maeda/itddd
 
 イベント駆動と CQRS を意識した、レイヤードアーキテクチャをベースとしたヘキサゴナルアーキテクチャになります。
 
-![全体像](https://storage.googleapis.com/zenn-user-upload/d617f950550e-20250311.png)
+![全体像](https://storage.googleapis.com/zenn-user-upload/4822208a6d8b-20250312.png)
 
 ### 各層について
 
 レイヤードアーキテクチャをベースに、以下の4層に分けています。
 
-![レイヤー構造について説明する図](https://storage.googleapis.com/zenn-user-upload/59d59a0db41d-20250311.png)
+![レイヤー構造について説明する図](https://storage.googleapis.com/zenn-user-upload/77976f29bd5d-20250312.png)
 
 - **プレゼンテーション層:** ソフトウェアの入出力を担当
 - **アプリケーション層:** ソフトウェアのユースケースを担当
@@ -181,7 +181,7 @@ export interface IProfileFactory {
 
 ### `IUseCaseInputPort`
 
-`IUseCaseInputPort` はビジネスユースケースを実現するインターフェースとなり、ドメイン層のオブジェクトを使用して一連のビジネスロジックを実現します。
+`IUseCaseInputPort` はビジネスユースケースを実現するインターフェースとなります。
 
 個々の具体的な `IUseCaseInputPort` は以下のベースとなるインターフェースを継承し、ビジネスユースケースごとに必要な入力と出力を定義します。
 
@@ -233,7 +233,7 @@ export interface IRenameCircleUseCaseInputPort
 
 ### `Interactor`
 
-Interactor はユースケースのうち、副作用を持つコマンド（操作）に該当するユースケースの実装クラスとなります。
+Interactor はユースケースのうち、副作用を持つコマンド（操作）に該当するユースケースの実装クラスとなります。ドメイン層のオブジェクトを使用して一連のビジネスロジックを実現します。
 
 ![Intaractor の例](https://storage.googleapis.com/zenn-user-upload/761f22d631e5-20250311.png)
 
