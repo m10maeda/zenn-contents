@@ -25,13 +25,13 @@ https://github.com/m10maeda/itddd
 
 イベント駆動と CQRS を意識した、レイヤードアーキテクチャをベースとしたヘキサゴナルアーキテクチャになります。
 
-![全体像](https://storage.googleapis.com/zenn-user-upload/d617f950550e-20250311.png)
+![全体像](https://storage.googleapis.com/zenn-user-upload/4822208a6d8b-20250312.png)
 
 ### 各層について
 
 レイヤードアーキテクチャをベースに、以下の4層に分けています。
 
-![レイヤー構造について説明する図](https://storage.googleapis.com/zenn-user-upload/59d59a0db41d-20250311.png)
+![レイヤー構造について説明する図](https://storage.googleapis.com/zenn-user-upload/77976f29bd5d-20250312.png)
 
 - **プレゼンテーション層:** ソフトウェアの入出力を担当
 - **アプリケーション層:** ソフトウェアのユースケースを担当
