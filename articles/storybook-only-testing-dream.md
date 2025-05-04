@@ -21,12 +21,12 @@ published: false
 import { composeStories } from '@storybook/testing-react';
 import * as stories from './TaskForm.stories';
 
-const { Default } = composeStories(stories);
+const { AddTask } = composeStories(stories);
 
 test('タスクを追加できる', async () => {
-  const { container } = render(<Default />);
+  const { container } = render(<AddTask />);
 
-  await Default.play?.({ canvasElement: container });
+  await AddTask.play?.({ canvasElement: container });
 
   expect(screen.getByText('新しいタスク')).toBeInTheDocument();
 });
@@ -35,7 +35,8 @@ test('タスクを追加できる', async () => {
 しかし、この方法には以下のような課題がありました。
 
 - Storybook、Jest、MSW の組み合わせによるセットアップの複雑さ
-- `Portal` を使用した UI コンポーネントでは、Storybook と Jest の `body` 要素が一致しないという技術的な問題がある
+- Storybook と Jest の `body` 要素が一致しないという技術的な問題がある
+  - `Portal` を使用した UI コンポーネントでは致命的で、解決に至らず
 - テストファイルだけを見ても、Arrange と Act の内容を把握しづらい
 - Story とテストコードがファイルとして分離しているため、確認・修正の際に行き来する必要がある
 - Jest でのアサーションと Storybook での表示確認が二重作業になってしまう
