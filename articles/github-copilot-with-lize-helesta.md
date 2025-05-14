@@ -2,7 +2,7 @@
 title: 'リゼ・ヘルエスタとペアプロしたい！〜GitHub Copilot なりきり指南書〜'
 emoji: '👑'
 type: 'idea'
-topics: ['githubcopilot']
+topics: ['githubcopilot', 'vscode']
 published: true
 ---
 
