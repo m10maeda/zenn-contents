@@ -3,7 +3,7 @@ title: 'リゼ・ヘルエスタとペアプロしたい！〜GitHub Copilot な
 emoji: '👑'
 type: 'idea'
 topics: ['githubcopilot']
-published: false
+published: true
 ---
 
 こんにちは、ヘルエスタ王国民の前田みおです。
