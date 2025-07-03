@@ -16,6 +16,12 @@
           "/\\^\\[.+\\]/"
         ],
         "skipUrlStringLink": true
+      },
+      "ja-no-successive-word": {
+        "allowOnomatopee": true,
+        "allow": [
+          "─"
+        ]
       }
     },
     "preset-ja-spacing": {
